@@ -13,6 +13,8 @@ load_dotenv()
 
 genai.configure(api_key=os.getenv("GEMINI_API_KEY")) 
 
+
+
 def get_pdf_text(pdf_docs):
     text = ""
     for pdf in pdf_docs:
@@ -30,7 +32,7 @@ def get_vectorstore(text_chunks):
     return FAISS.from_texts(texts=text_chunks, embedding=embeddings)
 
 def chat_with_gemini(question, chat_history):
-    model = genai.GenerativeModel("gemini-pro")
+    model = genai.GenerativeModel("gemini-1.5-pro")
     history = "\n".join([f"User: {msg['content']}" if msg['role'] == 'user' else f"Bot: {msg['content']}" for msg in chat_history])
     prompt = f"{history}\nUser: {question}\nBot:"  
     response = model.generate_content(prompt)

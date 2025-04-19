@@ -1,7 +1,12 @@
 streamlit
-pypdf2
-langchain
 python-dotenv
+PyPDF2
+docx2txt
+pandas
+openpyxl
+google-generativeai
+langchain
 faiss-cpu
-openai
-huggingface_hub
+sentence-transformers
+speechrecognition
+pyaudio

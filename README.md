@@ -20,7 +20,3 @@
    - Real demo GIF/video
    - Badges (CI, license, etc.) if available
 
-Would you like me to:
-1. Create a matching `requirements.txt`?
-2. Add deployment instructions (Heroku/Docker)?
-3. Include troubleshooting tips for common errors?
